@@ -1,0 +1,63 @@
+{
+  "name": "fair-playing-time",
+  "version": "1.0.0",
+  "description": "Fair playing time, bench rotations and goalkeeper-aware lineups for youth soccer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Pitch Time",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonash227/fair-playing-time.git"
+  },
+  "homepage": "https://github.com/simonash227/fair-playing-time#readme",
+  "bugs": {
+    "url": "https://github.com/simonash227/fair-playing-time/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./engine": {
+      "types": "./dist/engine.d.ts",
+      "import": "./dist/engine.js",
+      "default": "./dist/engine.js"
+    },
+    "./formations": {
+      "types": "./dist/formations.d.ts",
+      "import": "./dist/formations.js",
+      "default": "./dist/formations.js"
+    },
+    "./share": {
+      "types": "./dist/share.d.ts",
+      "import": "./dist/share.js",
+      "default": "./dist/share.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=23.0.0"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test src/*.test.ts",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "youth soccer",
+    "playing time",
+    "lineup",
+    "substitution",
+    "rotation",
+    "football"
+  ],
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  }
+}
